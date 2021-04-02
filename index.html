@@ -19,17 +19,17 @@
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    Wanna hear a joke about paper?
+                    <span id="question">Wanna hear a joke about paper?</span>
                 </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="row">
-                        <strong>Nevermind, its tearable!</strong>
+                        <strong><span id="answer">Nevermind, its tearable!</span></strong>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-primary btn-sm">Next Joke</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="nextJoke()">Next Joke</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,10 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
     <script>
-        
+        function nextJoke() {
+            console.log('next joke requested');
+            $('#collapseOne').collapse('toggle')
+        }
     </script>
 </body>
 
