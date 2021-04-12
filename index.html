@@ -9,6 +9,10 @@
             padding: 15px;
             font-family: monospace;
         }
+
+        #nextDiv {
+            padding: 15px;
+        }
     </style>
 </head>
 
@@ -28,7 +32,7 @@
                     <div class="row">
                         <strong><span id="answer">Nevermind, its tearable!</span></strong>
                     </div>
-                    <div>
+                    <div id="nextDiv">
                         <button type="button" class="btn btn-primary btn-sm" onclick="nextJoke()">Next Joke</button>
                     </div>
                 </div>
@@ -101,6 +105,8 @@
 
             document.getElementById('question').innerText = joke.q;
             document.getElementById('answer').innerText = joke.a;
+
+            $('#accordionExample').focus();
         }
     </script>
 </body>
